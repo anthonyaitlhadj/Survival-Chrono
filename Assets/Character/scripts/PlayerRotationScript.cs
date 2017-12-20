@@ -14,7 +14,7 @@ public class PlayerRotationScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float y = Input.GetAxis("Mouse X");
-        float x = Input.GetAxis("Mouse Y");
+        //float x = Input.GetAxis("Mouse Y");
         //Debug.Log(x + " " + y);
         transform.eulerAngles += new Vector3(0, y, 0) * SpeedRotation;
         //float XClamp = Mathf.Clamp(CamTransform.eulerAngles.x + x, 60, -60);
