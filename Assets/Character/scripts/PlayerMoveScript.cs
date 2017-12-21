@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoveScript : MonoBehaviour {
+public class PlayerMoveScript : MonoBehaviour
+{
 
     public float m_moveSpeed = 2;
     public float m_turnSpeed = 200;
@@ -21,12 +22,14 @@ public class PlayerMoveScript : MonoBehaviour {
     private bool m_isGrounded;
     private List<Collider> m_collisions = new List<Collider>();
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
 
-    void Update(){
+    }
+
+    void Update()
+    {
         MoveUpdate();
         //m_wasGrounded = m_isGrounded;
     }
@@ -35,8 +38,8 @@ public class PlayerMoveScript : MonoBehaviour {
     {
         float mouse_y = Input.GetAxis("Mouse X");
         float mouse_x = Input.GetAxis("Mouse Y");
-         transform.eulerAngles += new Vector3(0, mouse_y, 0) * m_moveSpeed/2;
-        CamTransform.eulerAngles += new Vector3(-mouse_x, 0, 0) * m_moveSpeed/2;
+        transform.eulerAngles += new Vector3(0, mouse_y, 0) * m_moveSpeed / 2;
+        CamTransform.eulerAngles += new Vector3(-mouse_x, 0, 0) * m_moveSpeed / 2;
 
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
@@ -67,14 +70,15 @@ public class PlayerMoveScript : MonoBehaviour {
             }
         }
 
-        if(validSurfaceNormal)
+        if (validSurfaceNormal)
         {
             m_isGrounded = true;
             if (!m_collisions.Contains(collision.collider))
             {
                 m_collisions.Add(collision.collider);
             }
-        } else
+        }
+        else
         {
             if (m_collisions.Contains(collision.collider))
             {
@@ -86,7 +90,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
     private void OnCollisionExit(Collision collision)
     {
-        if(m_collisions.Contains(collision.collider))
+        if (m_collisions.Contains(collision.collider))
         {
             m_collisions.Remove(collision.collider);
         }
