@@ -901,7 +901,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1677842157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 407, y: 236.5, z: 0}
+  m_LocalPosition: {x: 437.5, y: 235, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 882937696}
@@ -1086,6 +1086,21 @@ Prefab:
     - target: {fileID: 4679171248785818, guid: 0028c880279c4ac49b698265671f3b99, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82002543951843328, guid: 0028c880279c4ac49b698265671f3b99,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82002543951843328, guid: 0028c880279c4ac49b698265671f3b99,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82002543951843328, guid: 0028c880279c4ac49b698265671f3b99,
+        type: 2}
+      propertyPath: MaxDistance
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0028c880279c4ac49b698265671f3b99, type: 2}
