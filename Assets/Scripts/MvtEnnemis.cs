@@ -11,7 +11,7 @@ public class MvtEnnemis : LifeScript {
 	bool waitActive = false;
 	private bool isAttack = false;
     public int scoreValue = 10;
-    public ScoreScript ScoreManager;
+    private ScoreScript ScoreManager;
 
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
