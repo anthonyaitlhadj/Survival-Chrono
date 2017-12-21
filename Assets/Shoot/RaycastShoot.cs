@@ -42,17 +42,13 @@ public class RaycastShoot : MonoBehaviour
             if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
             {
                 laserLine.SetPosition(1, hit.point);
-
-                ShootableBox health = hit.collider.GetComponent<ShootableBox>();
-
-                if (health != null)
+                if (hit.collider.gameObject.tag == "Ennemi")
                 {
-                    health.Damage(gunDamage);
-                }
-
-                if (hit.rigidbody != null)
-                {
-                    hit.rigidbody.AddForce(-hit.normal * hitForce);
+                    hit.collider.GetComponent<LifeScript>().Damage(gunDamage);
+                    if (hit.rigidbody != null)
+                    {
+                        hit.rigidbody.AddForce(-hit.normal * hitForce);
+                    }
                 }
             }
             else

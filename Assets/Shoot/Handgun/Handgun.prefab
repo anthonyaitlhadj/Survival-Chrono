@@ -438,10 +438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da1c8689f3a5aa49a2e734ffa4bf3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunDamage: 1
+  gunDamage: 10
   fireRate: 0.25
   weaponRange: 50
-  hitForce: 100
+  hitForce: 5000
   gunEnd: {fileID: 4257259122297316}
 --- !u!120 &120142851645719904
 LineRenderer:
