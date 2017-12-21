@@ -6,13 +6,14 @@ using UnityEngine.AI;
 public class MvtEnnemis : LifeScript {
 
 	private NavMeshAgent agent;
-	public Transform Destination;
+	private Transform Destination;
 	private Animator animator;
 	bool waitActive = false;
 	private bool isAttack = false;
 
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
+        Destination = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
 	public override void Damage(int d)
