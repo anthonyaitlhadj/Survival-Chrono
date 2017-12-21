@@ -105,7 +105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1645238396910448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10.8}
+  m_LocalPosition: {x: 0, y: 0, z: 9.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4679171248785818}
@@ -424,7 +424,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 8d9660edbaa9273488c845c704bfb01e, type: 3}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &114837810198896492
@@ -488,13 +488,13 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.16901779
+        value: 0.37192154
         inSlope: -0.0000008835251
         outSlope: -0.0000008835251
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-        value: 0.23944283
+        value: 0.36987495
         inSlope: 0
         outSlope: 0
         tangentMode: 0
