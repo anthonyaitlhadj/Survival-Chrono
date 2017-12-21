@@ -10,10 +10,13 @@ public class MvtEnnemis : LifeScript {
 	private Animator animator;
 	bool waitActive = false;
 	private bool isAttack = false;
+    public int scoreValue = 10;
+    public ScoreScript ScoreManager;
 
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
         Destination = GameObject.FindGameObjectWithTag("Player").transform;
+        ScoreManager = GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreScript>();
 	}
 
 	public override void Damage(int d)
@@ -24,6 +27,7 @@ public class MvtEnnemis : LifeScript {
 		{
 			GetComponent<BoxCollider>().enabled = false;
 			gameObject.tag = "Untagged";
+            ScoreManager.score += scoreValue;
 			Destroy (this.gameObject, 2f);
 		}
 	}

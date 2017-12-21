@@ -769,6 +769,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pv: 30
+  scoreValue: 5
+  ScoreManager: {fileID: 0}
 --- !u!135 &135131326214827926
 SphereCollider:
   m_ObjectHideFlags: 1

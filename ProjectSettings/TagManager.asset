@@ -8,6 +8,7 @@ TagManager:
   - Ennemi
   - Corps
   - Spawn
+  - Score
   layers:
   - Default
   - TransparentFX
