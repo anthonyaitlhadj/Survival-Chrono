@@ -9,6 +9,7 @@ public class RaycastShoot : MonoBehaviour
     public float weaponRange = 50f;
     public float hitForce = 100f;
     public Transform gunEnd;
+    public GameObject Blood;
 
     private Camera fpsCam;
     private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
@@ -44,6 +45,8 @@ public class RaycastShoot : MonoBehaviour
                 laserLine.SetPosition(1, hit.point);
                 if (hit.collider.gameObject.tag == "Ennemi")
                 {
+                    //Blood.gameObject.SetActive(true);
+                    Instantiate(Blood, hit.point, Quaternion.identity);
                     hit.collider.GetComponent<LifeScript>().Damage(gunDamage);
                     if (hit.rigidbody != null)
                     {
@@ -53,6 +56,7 @@ public class RaycastShoot : MonoBehaviour
             }
             else
             {
+                //Blood.gameObject.SetActive(false);
                 laserLine.SetPosition(1, rayOrigin + (fpsCam.transform.forward * weaponRange));
             }
         }
