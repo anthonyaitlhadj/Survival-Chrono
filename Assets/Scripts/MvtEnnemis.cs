@@ -12,6 +12,7 @@ public class MvtEnnemis : LifeScript {
 	private bool isAttack = false;
     public int scoreValue = 10;
     private ScoreScript ScoreManager;
+    public int damage = 5;
 
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
@@ -44,7 +45,10 @@ public class MvtEnnemis : LifeScript {
             {
                 if (!waitActive)
                 {
-                    other.gameObject.GetComponentInParent<LifeScript>().Damage(5);
+                    if(ScoreManager.score > 20){
+                        damage = damage + 10;
+                    }
+                    other.gameObject.GetComponentInParent<LifeScript>().Damage(damage);
                     StartCoroutine(Wait());
                 }
             }
