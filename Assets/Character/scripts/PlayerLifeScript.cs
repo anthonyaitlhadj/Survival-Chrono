@@ -8,7 +8,7 @@ public class PlayerLifeScript : LifeScript
 	public override void Damage(int d){
 		base.Damage(d);
 		if(Pv <= 0){
-			SceneManager.LoadScene("SalleGame");
+			SceneManager.LoadScene("Menu");
 		}
 	}
 
