@@ -45,9 +45,8 @@ public class MvtEnnemis : LifeScript {
             {
                 if (!waitActive)
                 {
-                    if(ScoreManager.score > 20){
-                        damage = damage + 10;
-                    }
+                    /*if (ScoreManager.score>0)
+                        damage = damage + ScoreManager.score/2;*/
                     other.gameObject.GetComponentInParent<LifeScript>().Damage(damage);
                     StartCoroutine(Wait());
                 }
